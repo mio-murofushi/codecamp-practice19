@@ -1,4 +1,4 @@
-class Item:
+class Item(object):
     """
     商品の各属性値を保持する。
 
@@ -15,3 +15,6 @@ class Item:
         self.id = id
         self.name = name
         self.price = price
+
+    def tax_price(self):
+        return int(self.price*1.08)
